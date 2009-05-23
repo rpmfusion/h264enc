@@ -1,6 +1,6 @@
 Name:           h264enc
-Version:        8.7.2
-Release:        2%{?dist}
+Version:        8.8.0
+Release:        1%{?dist}
 Summary:        An interactive menu-driven frontend for mencoder
 Group:          Applications/Multimedia
 License:        GPLv2+
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri May 22 2009 Conrad Meyer <konrad@tylerc.org> - 8.8.0-1
+- Bump version to 8.8.0.
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 8.7.2-2
 - rebuild for new F11 features
 
