@@ -1,5 +1,5 @@
 Name:           h264enc
-Version:        8.9.9
+Version:        9.1.0
 Release:        1%{?dist}
 Summary:        An interactive menu-driven frontend for mencoder
 Group:          Applications/Multimedia
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Dec 8 2009 Conrad Meyer <konrad@tylerc.org> - 9.1.0-1
+- Bump version to 9.1.0.
+
 * Thu Aug 13 2009 Conrad Meyer <konrad@tylerc.org> - 8.9.9-1
 - Bump version to 8.9.9.
 
