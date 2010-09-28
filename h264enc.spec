@@ -1,11 +1,12 @@
 Name:           h264enc
-Version:        9.1.0
+Version:        9.0.9
 Release:        1%{?dist}
+Epoch:		1
 Summary:        An interactive menu-driven frontend for mencoder
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://h264enc.sourceforge.net/
-Source0:        http://internap.dl.sourceforge.net/sourceforge/h264enc/h264enc-%{version}.tar.gz
+Source0:        http://downloads.sourceforge.net/project/h264enc/h264enc/h264enc-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       mencoder
 BuildArch:      noarch
@@ -54,6 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Sep 28 2010 Conrad Meyer <konrad@tylerc.org> - 1:9.0.9-1
+- Downgrade to version compatible with F-12 mplayer/x264.
+
 * Tue Dec 8 2009 Conrad Meyer <konrad@tylerc.org> - 9.1.0-1
 - Bump version to 9.1.0.
 
