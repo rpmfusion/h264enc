@@ -1,8 +1,8 @@
 Name:           h264enc
-Version:        9.2.4
+Version:        9.4.6
 Release:        1%{?dist}
 # Epoch is 1 in F-13, so we need 1 here to keep upgrade path:
-Epoch:		1
+Epoch:          1
 Summary:        An interactive menu-driven frontend for mencoder
 Group:          Applications/Multimedia
 License:        GPLv2+
@@ -56,6 +56,14 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May 22 2012 Conrad Meyer <konrad@tylerc.org> - 1:9.4.6-1
+- Bump to version 9.4.6 (2012-04-16)
+- Current rawhide mplayer is 2012-02-05; F-16 is 2011-09-25. This version
+  seems to work with F-16's mplayer, at least.
+
+* Wed Feb 08 2012 Nicolas Chauvet <kwizart@gmail.com> - 1:9.2.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Tue Sep 28 2010 Conrad Meyer <konrad@tylerc.org> - 1:9.2.4-1
 - Bump to version 9.2.4, released 2010-07-21 (hopefully compatible
   with mplayer 20100703 in rpmfusion rawhide).
