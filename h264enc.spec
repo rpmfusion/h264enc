@@ -1,6 +1,6 @@
 Name:           h264enc
 Version:        10.4.7
-Release:        3%{?dist}
+Release:        4%{?dist}
 # Epoch is 1 in F-13, so we need 1 here to keep upgrade path:
 Epoch:          1
 Summary:        An interactive menu-driven frontend for mencoder
@@ -56,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Mar 01 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 1:10.4.7-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 1:10.4.7-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
