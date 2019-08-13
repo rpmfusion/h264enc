@@ -1,6 +1,6 @@
 Name:           h264enc
 Version:        10.4.7
-Release:        7%{?dist}
+Release:        8%{?dist}
 # Epoch is 1 in F-13, so we need 1 here to keep upgrade path:
 Epoch:          1
 Summary:        An interactive menu-driven frontend for mencoder
@@ -30,21 +30,23 @@ sed -i -e "s|/usr/local|%{_prefix}|" doc/README.matrices
 
 %install
 # binary
-install -D -m 755 %{name} %{buildroot}/%{_bindir}/%{name}
+install -D -m 755 h264enc %{buildroot}/%{_bindir}/h264enc
 # man
-gzip -9 man/%{name}.1
-install -D -m 644 man/%{name}.1 %{buildroot}/%{_mandir}/man1/%{name}.1
-# doc
-install -m 644 doc/* %{buildroot}/%{_docdir}/%{name}
-install -m 644 matrices/* %{buildroot}/%{_docdir}/%{name}/matrices
+install -D -m 644 man/h264enc.1 %{buildroot}/%{_mandir}/man1/h264enc.1
+# move license
+mv doc/LICENSE .
 
 %files
 %doc doc/* matrices/
+%license LICENSE
 %{_bindir}/h264enc
 %{_mandir}/man1/h264enc.1*
 
 
 %changelog
+* Tue Aug 13 2019 Leigh Scott <leigh123linux@gmail.com> - 1:10.4.7-8
+- Clean up spec file and improve packaging
+
 * Fri Aug 09 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:10.4.7-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
