@@ -4,7 +4,6 @@ Release:        7%{?dist}
 # Epoch is 1 in F-13, so we need 1 here to keep upgrade path:
 Epoch:          1
 Summary:        An interactive menu-driven frontend for mencoder
-Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://h264enc.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/project/h264enc/h264enc/h264enc-%{version}.tar.gz
