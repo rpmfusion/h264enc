@@ -23,32 +23,23 @@ and from AVI to the MP4 container.
 
 %prep
 %setup -q
-sed -i -e "s|^PREFIX=.*$||" \
-  -e "s|^DOCDIR=.*$|DOCDIR=./installed-docs|" \
-  -e 's|^MANDIR=.*$|MANDIR=$PREFIX/share/man/man1|' \
-  ./install
-
 sed -i -e "s|\r$||" matrices/eqm_avc_hr_matrix
 sed -i -e "s|/usr/local|%{_prefix}|" doc/README.matrices
 
-
 %build
-# Entire program is shell script, no compilation needed
-
 
 %install
-rm -rf $RPM_BUILD_ROOT
-PREFIX="$RPM_BUILD_ROOT%{_prefix}" ./install
-rm ./installed-docs/uninstall
-
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
+# binary
+install -D -m 755 %{name} %{buildroot}/%{_bindir}/%{name}
+# man
+gzip -9 man/%{name}.1
+install -D -m 644 man/%{name}.1 %{buildroot}/%{_mandir}/man1/%{name}.1
+# doc
+install -m 644 doc/* %{buildroot}/%{_docdir}/%{name}
+install -m 644 matrices/* %{buildroot}/%{_docdir}/%{name}/matrices
 
 %files
-%defattr(-,root,root,-)
-%doc ./installed-docs/*
+%doc doc/* matrices/
 %{_bindir}/h264enc
 %{_mandir}/man1/h264enc.1*
 
