@@ -8,7 +8,6 @@ Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://h264enc.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/project/h264enc/h264enc/h264enc-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:       mencoder
 BuildArch:      noarch
 
